@@ -45,16 +45,24 @@
 			font-weight: bold;
 			color:#6e7a7f;
 		}
+		ul.list li h5{
+			margin-left: 135px;
+			font-weight: bold;
+			color:#6e7a7f;
+		}
+		nav a:hover {
+			background-color: #000;
+		}
 	</style>
 </head>
 <body>
 <div id="main">
 	<nav class="navbar navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">Evenement à venir</a>
-		<a class="list-icon" v-bind:class="{ 'active': layout == 'list'}" v-on:click="layout = 'list'">
+		<a style="color: white; font-size: 28px;" class="list-icon" v-bind:class="{ 'active': layout == 'list'}" v-on:click="layout = 'list'">
 			<i class="fas fa-list"></i>
 		</a>
-		<a class="grid-icon" v-bind:class="{ 'active': layout == 'grid'}" v-on:click="layout = 'grid'">
+		<a style="color: white; font-size: 28px;" class="grid-icon" v-bind:class="{ 'active': layout == 'grid'}" v-on:click="layout = 'grid'">
 			<i class="fab fa-amazon-pay"></i>
 		</a>
 		<form class="form-inline my-2 my-lg-0">
@@ -81,7 +89,7 @@
 			<a>
 				<img :src="record.fields.media_1">
 			</a>
-			{{record.fields.nom}}
+			<h5>{{record.fields.nom}}</h5>
 			<p>{{record.fields.description}}</p>
 		</li>
 	</ul>
